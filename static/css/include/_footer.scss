@@ -1,0 +1,66 @@
+.footerSection {
+  background-color: #120f0f;
+}
+
+.About-Us-row {
+  background-color: #120f0f;
+  padding: 60px;
+}
+.About-Us-column {
+  margin: 20px 0;
+}
+
+.About-Us-column h4 {
+  font-family: "Poppins";
+  color: rgb(255, 255, 255);
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.About-Us-column p {
+  font-family: "Poppins";
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding-right: 10px;
+}
+
+.About-Us-Icons {
+  margin-top: 60px;
+  opacity: 0;
+}
+
+.About-Us-Icons img {
+  width: 45px;
+  margin-right: 15px;
+  transition: all 0.5s ease;
+}
+
+.About-Us-Icons img:hover {
+  transform: translateY(-10px);
+}
+
+.blogText {
+  margin-bottom: 40px;
+}
+
+.blogText p {
+  margin-bottom: 10px;
+}
+
+.blogText div span {
+  color: #808080;
+  margin-right: 10px;
+}
+
+.blogText div {
+  font-size: 15px;
+}
+
+.footerIcon {
+  margin-right: 10px;
+}
+
+.footerIcon i {
+  color: white;
+}

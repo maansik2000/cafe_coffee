@@ -1,0 +1,341 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container-fluid px-0">
+  <!-- Slider 1 -->
+  <div class="owl-carousel owl-theme">
+    <div class="mug1">
+      <div class="caption caption-animation">
+        <h4>Welcome</h4>
+
+        <h3>THE BEST COFFEE TASTING</h3>
+        <h3>EXPERIENCE</h3>
+        <p>
+          We’re passionate about ethically sourcing the finest coffee beans,
+          roasting them with great care
+        </p>
+        <div class="CarouselBtns">
+          <a class="menuBtns" href="/menu"><button>Menu</button></a>
+          <a class="orderBtns" href="#Order_now"><button>Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mug">
+      <div class="caption caption-animation">
+        <h4>Welcome</h4>
+        <h3>AMAZING TASTE AND BEAUTIFUL</h3>
+        <h3>PLACE</h3>
+        <p>
+          Delicious, handcrafted beverages and great-tasting food. The secret to
+          making life better.
+        </p>
+        <div class="CarouselBtns">
+          <a class="menuBtns" href="/menu"><button>Menu</button></a>
+          <a class="orderBtns" href="#Order_now"><button>Order Now</button></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mug2">
+      <div class="caption caption-animation">
+        <h4>Welcome</h4>
+        <h3>CREAMY HOT AND READY TO</h3>
+        <h3>SERVE</h3>
+        <p>It starts with the promise of a perfectly made beverage.</p>
+        <div class="CarouselBtns">
+          <a class="menuBtns" href="/menu"><button>Menu</button></a>
+          <a class="orderBtns" href="#Order_now"><button>Order Now</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Message info-->
+  <div class="container-fluid slider">
+    <div class="row">
+      <div class="col-md-3 sliderInfo ">
+        <div>
+          <span class="sliderInfoIcon"><i class="fas fa-phone-alt"></i></span>
+        </div>
+        <div>
+          <h6> 000 (123) 456 7890</h6>
+          <p>A small river named Duden flows by their place and supplies.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 sliderInfo ">
+        <div>
+          <span class="sliderInfoIcon"><i class="fas fa-map-marker-alt"></i></span>
+        </div>
+        <div>
+          <h6>198 West 21th Street</h6>
+          <p>203 Fake St. Mountain View, San Francisco, California, USA</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 sliderInfo ">
+        <div>
+          <span class="sliderInfoIcon"><i class="far fa-clock"></i></span>
+        </div>
+        <div>
+          <h6> Open Monday-Friday</h6>
+          <p>8:00am - 9:00pm</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 banner sliderInfo">
+        <div class="row">
+          <form class="form " method="post" action="/">
+            {% csrf_token %}
+
+            <div class="row">
+              <div class="col-md">
+                <div class="form-group bookingForm">
+                  <input type="name" class="form-control " id="FirstName" name="FirstName" placeholder="First Name" />
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group bookingForm">
+                  <input type="name" class="form-control " id="LastName" name="LastName" placeholder="Last Name" />
+                </div>
+              </div>
+            </div>
+            <div class="form-group bookingForm">
+
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" />
+              </div>
+            </div>
+            <div class="form-group bookingForm">
+
+              <input type="phone" class="form-control " id="phone" aria-describedby="phone" placeholder=" Phone">
+            </div>
+            <div class="form-group bookingForm">
+              <textarea class="form-control Message" name="desc" id="message" cols="50" rows="2"
+                placeholder="Ask anything"></textarea>
+            </div>
+
+            <button type="submit" class="bookingButton">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Message info-->
+
+
+  <!--Discover story section-->
+  <div class="container-fluid discover">
+    <div class="row">
+      <div class="col-md-6 discoverPage">
+        <!-- <img src="../static/images/pexels-jonathan-borba-2878707.jpg" width="750" height="700"> -->
+      </div>
+      <div class="col-md-6 discoverPageStory">
+        <div class="discoverPageSection">
+          <h1 class="discoverPageHeader">Discover</h1>
+          <h2 class="discoveryPageSubHeader">Our Goal</h2>
+          <p>It’s true. The perfect cup of coffee and a wholesome, delicious snack can make your day. 
+            So we make sure everything you choose is of the finest quality. 
+            Because really, isn’t that how life should be? We know everyone is busy in their life, so our goal is to provide you Delicious, handcrafted beverages and great-tasting food. 
+            The secret to making life better. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Discover story section-->
+
+
+  <!--Feature section-->
+  <div class="container-fluid features">
+    <div class="row">
+      <div class="col-md-4 featureSection">
+        <div class="featureSectionIcon">
+          <img src="../static/images/note.svg" alt="note" height="65" width="65">
+        </div>
+
+        <h2>Easy to order</h2>
+        <p>Lorem ipsum dolor sit, amet consensequni alias adipisci voluptatum nemo?</p>
+      </div>
+      <div class="col-md-4 featureSection">
+        <div class="featureSectionIcon">
+          <img src="../static/images/customer.svg" alt="customer" height="65" width="65">
+        </div>
+
+        <h2>
+          Quality Service
+        </h2>
+        <p>Lorem ipsum dolor sit amet camet animm itaque fuga. Minus, vero?</p>
+      </div>
+      <div class="col-md-4 featureSection">
+        <div class="featureSectionIcon">
+          <img src="../static/images/coffee-beans.svg" alt="coffee-beans" height="65" width="65">
+        </div>
+
+        <h2>Quality Coffee</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisiommodi vel porro odio saepe!</p>
+      </div>
+    </div>
+  </div>
+  <!--Feature section-->
+
+
+  <!--Our menu section-->
+  <div class="container Menu-Features">
+    <div class="row">
+      <div class="col-md-6 menuSection">
+        <div class="container-fluid px-0 menuHeading">
+          <div class="menuHeadings">
+            <h1>Discover</h1>
+            <h2>Our menu</h2>
+          </div>
+        </div>
+
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+          texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          <a class="menuBtn" href="/menu"><button>Menu</button></a>
+      </div>
+      <div class="col-md-6 ">
+        <div class="image-row">
+          <div class="image-column">
+            <img src="../static/images/coffee1.jpg" alt="coffee1">
+
+          </div>
+          <div class="image-column">
+            <img src="../static/images/coffee3.jpg" alt="coffee3">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Our menu section-->
+
+
+  <!--coffee branches and awards-->
+  <div class="container-fluid Coffee-Branch ">
+    <div class="row">
+      <div class="col CoffeeSection">
+        <div class="CoffeeBoxIcon">
+          <i class="fas fa-mug-hot"></i>
+        </div>
+        <h1>100</h1>
+        <h2>Coffee Branches</h2>
+      </div>
+      <div class="col CoffeeSection">
+        <div class="CoffeeBoxIcon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h1>85</h1>
+        <h2>Number of customer</h2>
+      </div>
+
+      <div class="col CoffeeSection">
+        <div class="CoffeeBoxIcon">
+          <img src="../static/images/coffee (1).png" alt="iconCoffee" width="50">
+        </div>
+        <h1>10567</h1>
+        <h2>Happy Customer</h2>
+      </div>
+      <div class="col CoffeeSection">
+        <div class="CoffeeBoxIcon">
+          <img src="../static/images/customer (1).png" alt="customerIcon" width="50">
+        </div>
+        <h1>900</h1>
+        <h2>Staff</h2>
+      </div>
+    </div>
+  </div>
+  <!--coffee branches and awards-->
+
+
+  <!--our best product-->
+  <div class="container-fluid CoffeeProducts" id="Order_now">
+    <div class="col-12 BestCoffeeHeading">
+      <h2>Discover</h2>
+      <h1>Our Best Coffee</h1>
+    </div>
+    <div class="col-md-12" >
+      <div class="row coffee-row">
+
+        {% for product in product %}
+        <div class="col coffee-column">
+          <img src="{{product.imageUrl}}" alt="coffee1">
+          <div class="coffee-subheaders">
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <h3>${{product.price}}</h3>
+            <button class="orderBtn" >Add to cart</button>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!--our best product-->
+
+
+  <!--Contact us section-->
+  <div class="container-fluid BookTableBanner">
+    <div class="row">
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1829240848833!2d-73.98775743473108!3d40.75800127932692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855a96da09d%3A0x860bf5a5e1a00a68!2sTimes%20Square%2C%20New%20York%2C%20NY%2010036%2C%20USA!5e0!3m2!1sen!2sin!4v1619202613982!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <div class="col-md-6 BooktableForm">
+        <h1>Book a Table</h1>
+        <div class="tableBanner">
+          <form class="form " method="post" action="/">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md">
+                <div class="form-group TablebookingForm">
+                  <input type="name" class="form-control " id="FirstName" name="FirstName" placeholder="First Name" />
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group TablebookingForm">
+                  <input type="name" class="form-control " id="LastName" name="LastName" placeholder="Last Name" />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group TablebookingForm">
+                  <input type="date" id="coffeeTableDate" class="form-control" name="coffeeTableDate"/>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group TablebookingForm">
+                  <input type="time" id="tableTime" name="tableTime"  class="form-control" placeholder="time"/>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group TablebookingForm">
+                  <input type="phone" id="phone" name="phone"  class="form-control" placeholder="Phone"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group TablebookingForm">
+                  <textarea class="form-control Message" name="desc" id="message" cols="50" rows="2"
+                placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group TablebookingForm">
+                  <button type="submit" class="TablebookingButton">Appointment</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Contact us section-->
+
+</div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,161 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container-fluid px-0">
+  <div class="mug">
+    <div class="caption contactInfo caption-animation">
+      <h3>OUR MENU</h3>
+      <p><a href="/">Home</a>/ Menu</p>
+    </div>
+  </div>
+</div>
+
+<!--Discover Our Menu-->
+
+<div class="container-fluid CoffeeProducts" id="Order_now">
+  <div class="col-12 BestCoffeeHeading">
+    <h2>Discover</h2>
+    <h1>Our Menu</h1>
+    <div class="col-md-10 menuText">
+      <p>
+        Delicious, handcrafted beverages and great-tasting food. The secret to
+        making life better.It’s true. The perfect cup of coffee and a wholesome,
+        delicious snack can make your day. So we make sure everything you choose
+        is of the finest quality. Because really, isn’t that how life should be?
+      </p>
+    </div>
+  </div>
+  <div class="container-fluid px-0">
+    <div class="row">
+      <div class="col-md-6 menus">
+        <div class="menuImage"></div>
+        <p>
+          Amazing coffees from around the world. Handcrafted beverages to
+          discover and enjoy. We love bringing you these things.
+        </p>
+        <a class="orderBtns" href="/coffee-blend-drinks"
+          ><button>Coffee Blend Drinks</button></a
+        >
+      </div>
+      <div class="col-md-6 menus">
+        <div class="menuImage1"></div>
+        <p>
+          Our pastries and sandwiches are made with high-quality, simple
+          ingredients. So all the goodness you taste is real food, simply
+          delicious.
+        </p>
+        <a class="orderBtns" href="/coffee-blend-food"
+          ><button>Coffee Blend Food</button></a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Discover Our Menu-->
+
+<!--Discover our products-->
+
+<div class="container">
+  <div class="row">
+    <div class="ProductHeading">
+      <h2>Discover</h2>
+      <h1>Our Products</h1>
+    </div>
+    <div class="col-md-12">
+      <div class="productBtn">
+        <div id="btnContainer">
+          <button
+            class="productButton current"
+            onclick="filterSelection('drinks')"
+          >
+            Drinks
+          </button>
+          <button class="productButton" onclick="filterSelection('mainDish')">
+            Specials
+          </button>
+          <button class="productButton" onclick="filterSelection('desserts')">
+            Desserts
+          </button>
+        </div>
+      </div>
+      <div class="container">
+        <main>
+          <section class="cards" id="ProductSection1">
+            {% for product in product %} {% if product.category == "espresso" %}
+            <div class="Card drinks">
+              
+              <div class="card_image-container">
+                <img src="{{product.imageUrl}}" alt="product-image1" />
+              </div>
+              <div class="cards-content">
+                <div class="cards-title">
+                  <h1>{{product.name}}</h1>
+                </div>
+                <div class="cards-info">
+                  <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Saepe, minima.
+                  </p>
+                  <h5>${{product.price}}</h5>
+                  <button class="orderBtn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+
+            {% for product in product %} {% if product.category == "specials" %}
+            <div class="Card mainDish">
+              <div class="card_image-container">
+                <img
+                  src="{{product.imageUrl}}"
+                  alt="product-image1"
+                />
+              </div>
+              <div class="cards-content">
+                <div class="cards-title">
+                  <h1>{{product.name}}</h1>
+                </div>
+                <div class="cards-info">
+                  <p>
+                    Far far away, behind the word mountains, far from the
+                    countries Vokalia and Consonantia.
+                  </p>
+                  <h5>${{product.price}}</h5>
+                  <button class="orderBtn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+
+            {% for product in dessert %} {% if product.category == "desserts" %}
+            <div class="Card desserts">
+              <div class="card_image-container">
+                <img
+                  src="{{product.imageUrl}}"
+                  alt="product-image1"
+                />
+              </div>
+              <div class="cards-content">
+                <div class="cards-title">
+                  <h1>{{product.name}}</h1>
+                </div>
+                <div class="cards-info">
+                  <p>
+                    Far far away, behind the word mountains, far from the
+                    countries Vokalia and Consonantia.
+                  </p>
+                  <h5>${{product.price}}</h5>
+                  <button class="orderBtn">Add to cart</button>
+                </div>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Discover our products-->
+
+{% endblock body %}

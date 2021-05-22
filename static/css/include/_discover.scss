@@ -1,0 +1,308 @@
+.discoverPage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/pexels-kaique-rocha-331991.jpg");
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.discover {
+  position: relative;
+}
+
+.discoverPageStory {
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  opacity: 0;
+}
+
+.discoverPageSection {
+  background-color: rgba(0, 0, 0, 0.445);
+  padding: 20px;
+}
+.discoverPageSection h1 {
+  font-family: "Parisienne", cursive;
+  color: #f1aa59;
+  font-size: 50px;
+}
+
+.discoverPageSection p {
+  font-family: "Poppins";
+  font-size: 15px;
+  color: #808080;
+  line-height: 27px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0;
+  margin: 0 0 16px;
+  padding: 0;
+  font-weight: 300;
+}
+
+.features {
+  background-color: #c79863;
+}
+
+.featureSection,
+.CoffeeSection {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureSection h2 {
+  color: black;
+  font-size: 20px;
+  line-height: 27px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+  margin: 30px 0;
+}
+
+.featureSection p {
+  color: #1d150b;
+  font-family: "Poppins";
+  text-align: center;
+  font-size: 15px;
+}
+
+.featureSectionIcon {
+  border: 1px solid black;
+  padding: 18px;
+}
+
+.menuBtn button {
+  border: 1px solid #c79863;
+  background-color: transparent;
+  color: #c79863;
+  transition: all 0.3s ease;
+  &:hover {
+    background: #c79863;
+    color: white;
+  }
+}
+
+.menuSection {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuSection p {
+  text-align: end;
+}
+
+.menuHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menuHeadings h1 {
+  text-align: end;
+  font-size: 50px;
+  color: #c79863;
+  font-family: "Parisienne", cursive;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuHeadings h2 {
+  text-align: end;
+  font-size: 55px;
+  font-family: "Josefin Sans", Arial, sans-serif;
+  position: relative;
+  top: -30px;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.image-column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.image-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.Menu-Features {
+  padding: 50px;
+}
+
+.Coffee-Branch {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/pexels-malidate-van-849646.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px;
+}
+
+.CoffeeSection h1 {
+  font-size: 32px;
+  margin-top: 20px;
+  color: #c79863;
+}
+.CoffeeSection h2 {
+  font-size: 16px;
+  font-family: "Poppins";
+  color: #bfbfbf;
+}
+
+.CoffeeBoxIcon {
+  border: 1px solid #c79863;
+  padding: 18px;
+}
+
+.CoffeeBoxIcon i {
+  font-size: 35px;
+  color: #c79863;
+}
+
+.CoffeeProducts {
+  padding: 90px;
+}
+.coffee-row,
+.About-Us-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.coffee-column,
+.About-Us-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.coffee-column img {
+  margin-top: 60px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.coffee-column h2 {
+  font-size: 22px;
+  font-family: "Poppins";
+  color: whitesmoke;
+}
+
+.coffee-subheaders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee-subheaders h2 {
+  margin-top: 18px;
+}
+
+.coffee-subheaders h3 {
+  font-size: 18px;
+}
+
+.coffee-subheaders p {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 14px;
+  color: #808080;
+}
+
+.BestCoffeeHeading,
+.ProductHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.BestCoffeeHeading h1,
+.ProductHeading h1 {
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  top: -40px;
+}
+
+.BestCoffeeHeading h2
+,.ProductHeading h2 {
+  font-size: 60px;
+  font-family: "Parisienne", cursive;
+  color: #c79863;
+}
+
+.BookTableBanner {
+  background-color: black;
+}
+
+.BooktableForm {
+  padding: 60px;
+  padding-bottom: 40px;
+}
+
+.BooktableForm h1 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.TablebookingForm input {
+  font-size: 14px !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid gray !important;
+  color: #b8b8b8 !important;
+  height: 30px;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.TablebookingForm input::placeholder {
+  color: #b8b8b8 !important;
+  font-size: 14px !important;
+}
+
+.TablebookingForm button {
+  color: white;
+  border: none;
+  width: 100%;
+  background-color: #c79863;
+}
+
+.TablebookingForm textarea::placeholder {
+  color: #b8b8b8 !important;
+  font-weight: normal;
+}
+
+.orderBtn {
+  font-size: 14px;
+  padding: 14px;
+  background-color: transparent;
+  color: #c79863;
+  border: 1px solid #c79863;
+  transition: all 0.5s ease;
+  &:hover {
+    background-color: #c79863;
+    color: white;
+    outline: none;
+  }
+}

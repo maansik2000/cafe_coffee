@@ -1,0 +1,218 @@
+.menuText {
+  text-align: center;
+  margin: 0;
+  color: gray;
+  position: relative;
+  top: -30px;
+  padding: 0;
+  font-size: 15px;
+}
+
+.menuImage {
+  background-image: url("../images/pexels-fallon-michael-3551717.jpg");
+}
+.menuImage1 {
+  background-image: url("../images/pexels-pixabay-45202.jpg");
+}
+
+.menuImage,
+.menuImage1 {
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+
+  p {
+    margin: 30px 25px 25px;
+    text-align: center;
+    color: rgb(192, 192, 192);
+  }
+}
+
+.MenuItems {
+  text-decoration: none;
+  color: #c79863;
+  text-align: left;
+  transition: all 0.3s ease;
+  &:hover {
+    text-decoration: none;
+    color: #e08f33;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+  padding: 60px 0;
+}
+
+.cards {
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+}
+
+.Card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #2424247c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-7px);
+  }
+  display: none;
+}
+
+.card_image-container {
+  width: 100%;
+  height: 300px;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_image-container img {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards-content,
+.cards-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-title {
+  margin-top: 22px;
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+}
+
+.cards-info {
+  padding: 8px;
+  p {
+    text-align: center;
+    font-size: 14px;
+    color: rgb(194, 194, 194);
+    margin-top: 10px;
+  }
+
+  button {
+    margin: 10px 0 20px;
+  }
+}
+
+.productBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productButton {
+  border: none;
+  border-bottom: 2px solid #c79863;
+  color: #c79863;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+  &:hover {
+    background-color: #c79863;
+    color: rgb(34, 34, 34);
+    outline: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.productButton.current {
+  background-color: #c79863;
+  color: rgb(34, 34, 34);
+}
+
+.show {
+  display: block;
+}
+
+.menuHeader {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.menuHeader p {
+  font-size: 20px;
+}
+
+.menuHeader h1 {
+  font-family: "Parisienne", cursive;
+  color: #c79863;
+  font-size: 60px;
+}
+
+.productList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.productImageList img {
+  border-radius: 500px;
+  border: 3px solid #c79863;
+  margin-left: 20px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 18px;
+  color: #d6d6d6;
+  p {
+    color: #808080;
+    font-size: 14px;
+  }
+}
+
+.productHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #c79863;
+  margin-top: 40px;
+
+  margin-bottom: 50px;
+  hr {
+    width: 300px;
+  }
+  h1 {
+    font-family: "Parisienne", cursive;
+    font-size: 50px;
+  }
+}

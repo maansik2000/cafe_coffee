@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/background.jpg");
+
+  background-position: center;
+  background-size: contain;
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+
+:root {
+  --animate-duration: 2s;
+}
+
+@import "./include/banner";
+@import "./include/carousel";
+@import "./include/contact";
+@import "./include/discover";
+@import "./include/footer";
+@import "./include/menu";
+@import "./include/mediaQueries";
+@import "./include/navbar";

@@ -1,0 +1,90 @@
+
+
+@media screen and (max-width: 1000px) {
+  .Card {
+    grid-column-end: span 6;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .About-Us-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner,
+  .discoverPageStory {
+    position: static;
+  }
+  .sliderInfo {
+    display: block;
+  }
+
+  .discoverPage {
+    height: 400px;
+  }
+
+  .menuSection p,
+  .menuHeadings h2,
+  .menuHeadings h1 {
+    text-align: left;
+  }
+
+  .image-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .coffee-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .About-Us-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  main{
+    grid-gap: 20px;
+  }
+  .Card {
+    grid-column-end: span 12;
+  }
+
+}
+
+
+@media screen and (max-width: 680px) {
+  .coffee-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .coffee-column img {
+    width: 100%;
+    height: 400px;
+  }
+  .About-Us-row {
+    padding: 10px;
+  }
+  .menus {
+    p {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main{
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 30px;
+  }
+  .cards{
+    grid-column:2 / span 6 ;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+  }
+.Card{
+  grid-column-end: span 6;
+}
+}

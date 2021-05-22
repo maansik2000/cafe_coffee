@@ -1,0 +1,70 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 menuHeader">
+      <h1>Coffee Blend Drinks</h1>
+      <p>Discover Our Best Drinks</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="desserts">
+        <div class="productHeader">
+          <h1>Desserts</h1>
+          <hr />
+        </div>
+        {% for product in product %} {% if product.category == "desserts" %}
+        <ul class="productList">
+          <li class="listItemAnimation">
+            {{product.name}} ................................${{product.price|floatformat:2}}
+            <p>Lorem ipsum dolor sit amet.</p>
+          </li>
+          <div class="productImageList">
+            <img src="{{product.imageUrl}}" alt="list" width="75"/>
+          </div>
+        </ul>
+
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="specials">
+        <div class="productHeader">
+          <h1>Specials</h1>
+          <hr />
+        </div>
+        {% for product in product %} {% if product.category == "specials" %}
+        <ul class="productList">
+          <li class="listItemAnimation">
+            {{product.name}} ................................${{product.price|floatformat:2}}
+            <p>Lorem ipsum dolor sit amet.</p>
+          </li>
+          <div class="productImageList">
+            <img src="{{product.imageUrl}}" alt="list" width="75"/>
+          </div>
+        </ul>
+
+        {% endif %} {% endfor %}
+      </div>
+      <div class="wrap">
+        <div class="productHeader">
+          <h1>Wrap</h1>
+          <hr />
+        </div>
+        {% for product in product %} {% if product.category == "wrap" %}
+        <ul class="productList">
+          <li class="listItemAnimation">
+            {{product.name}} ................................${{product.price|floatformat:2}}
+            <p>Lorem ipsum dolor sit amet.</p>
+          </li>
+          <div class="productImageList">
+            <img src="{{product.imageUrl}}" alt="list" width="75"/>
+          </div>
+        </ul>
+
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
