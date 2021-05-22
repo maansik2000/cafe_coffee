@@ -1,0 +1,1070 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/background.jpg");
+  background-position: center;
+  background-size: contain;
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+
+:root {
+  --animate-duration: 2s;
+}
+
+.slider {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.slider h6 {
+  font-size: 14px;
+  line-height: 22.4px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0;
+  margin: 0 0 8px;
+  padding: 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+.sliderInfo {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.sliderInfo p {
+  color: grey;
+  font-family: "Poppins";
+  font-size: 15px;
+  line-height: 27px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0;
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  text-align: left;
+}
+
+.banner {
+  background-color: #c79863;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  min-height: 300px;
+}
+
+.sliderInfoIcon {
+  margin-right: 20px;
+  color: #e5902f;
+}
+
+.bookingButton {
+  color: black;
+  background-color: whitesmoke;
+}
+
+.bookingForm input {
+  border-bottom: 1px solid black !important;
+  margin: 0;
+  margin-top: 5px;
+  color: black !important;
+}
+
+.bookingForm textarea {
+  border-bottom: 1px solid black !important;
+}
+
+.bookingButton {
+  background-color: white;
+  margin: 0;
+}
+
+.owl-carousel {
+  position: relative;
+  z-index: 1;
+}
+
+.mug {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pexels-quang-nguyen-vinh-2133535.jpg");
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mug1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pexels-lisa-861090.jpg");
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mug2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pexels-afta-putta-gunawan-702251.jpg");
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption {
+  min-height: 130vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.caption h4 {
+  font-family: "Parisienne", cursive;
+  font-size: 30px;
+  color: orange;
+  margin-bottom: 25px;
+}
+
+.caption h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 38px;
+  letter-spacing: 0.3rem;
+}
+
+.caption p {
+  margin-top: 22px;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button {
+  padding: 15px 32px;
+  border: 1px solid whitesmoke;
+  margin: 25px 8px;
+  background-color: transparent;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+button a:hover {
+  color: white;
+}
+
+.orderBtns button {
+  border: 1px solid #c79863;
+  color: #c79863;
+  transition: all 0.3s ease;
+}
+
+.orderBtns button:hover {
+  text-decoration: none;
+  background-color: #c79863;
+  color: white;
+}
+
+.orderBtns button:focus {
+  outline: 0;
+}
+
+.menuBtns button {
+  border: none;
+  color: white;
+  background: #b97a33;
+  transition: all 0.3s ease;
+}
+
+.menuBtns button:hover {
+  text-decoration: none;
+  background-color: #f08a17;
+}
+
+.contactInfo p {
+  color: gray;
+}
+
+.contactInfo a {
+  text-decoration: none;
+  color: whitesmoke;
+  margin-right: 10px;
+}
+
+.contact {
+  opacity: 0;
+}
+
+.contactAddress h1 {
+  margin-top: 80px;
+  margin-bottom: 75px;
+  font-family: "Poppins";
+  font-size: 30px;
+}
+
+.contactAddress p {
+  margin-top: 30px;
+  font-family: "Poppins";
+  font-size: 18px;
+}
+
+.contactAddress p span {
+  color: #c5891a;
+  font-size: 15px;
+  font-family: "Poppins";
+  margin-left: 5px;
+}
+
+.contactForm {
+  margin-top: 80px;
+}
+
+input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid gray !important;
+  margin-bottom: 30px;
+  color: #fefefe !important;
+}
+
+input::placeholder {
+  color: #fefefe !important;
+  font-size: 16px !important;
+}
+
+input:focus {
+  border-bottom: 1px solid #c5891a !important;
+}
+
+.Message {
+  background-color: transparent;
+  color: #fefefe !important;
+  border: none !important;
+  border-bottom: 1px solid gray !important;
+  padding: 10px !important;
+}
+
+.Message::placeholder {
+  color: #fefefe !important;
+  font-size: 16px !important;
+}
+
+.Message:focus {
+  background-color: transparent !important;
+}
+
+.contact {
+  margin-bottom: 30px;
+}
+
+.submitBtn {
+  background-color: #c5891a;
+  border: none;
+}
+
+#map {
+  width: 100%;
+  height: 500px;
+}
+
+.alert {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 9999;
+}
+
+.close {
+  position: relative;
+  top: -20px !important;
+}
+
+.discoverPage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/pexels-kaique-rocha-331991.jpg");
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.discover {
+  position: relative;
+}
+
+.discoverPageStory {
+  position: absolute;
+  top: 130px;
+  right: 50px;
+  opacity: 0;
+}
+
+.discoverPageSection {
+  background-color: rgba(0, 0, 0, 0.445);
+  padding: 20px;
+}
+
+.discoverPageSection h1 {
+  font-family: "Parisienne", cursive;
+  color: #f1aa59;
+  font-size: 50px;
+}
+
+.discoverPageSection p {
+  font-family: "Poppins";
+  font-size: 15px;
+  color: #808080;
+  line-height: 27px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0;
+  margin: 0 0 16px;
+  padding: 0;
+  font-weight: 300;
+}
+
+.features {
+  background-color: #c79863;
+}
+
+.featureSection,
+.CoffeeSection {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.featureSection h2 {
+  color: black;
+  font-size: 20px;
+  line-height: 27px;
+  vertical-align: baseline;
+  letter-spacing: normal;
+  word-spacing: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+  margin: 30px 0;
+}
+
+.featureSection p {
+  color: #1d150b;
+  font-family: "Poppins";
+  text-align: center;
+  font-size: 15px;
+}
+
+.featureSectionIcon {
+  border: 1px solid black;
+  padding: 18px;
+}
+
+.menuBtn button {
+  border: 1px solid #c79863;
+  background-color: transparent;
+  color: #c79863;
+  transition: all 0.3s ease;
+}
+
+.menuBtn button:hover {
+  background: #c79863;
+  color: white;
+}
+
+.menuSection {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuSection p {
+  text-align: end;
+}
+
+.menuHeading {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menuHeadings h1 {
+  text-align: end;
+  font-size: 50px;
+  color: #c79863;
+  font-family: "Parisienne", cursive;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menuHeadings h2 {
+  text-align: end;
+  font-size: 55px;
+  font-family: "Josefin Sans", Arial, sans-serif;
+  position: relative;
+  top: -30px;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.image-column {
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 4px;
+}
+
+.image-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.Menu-Features {
+  padding: 50px;
+}
+
+.Coffee-Branch {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pexels-malidate-van-849646.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px;
+}
+
+.CoffeeSection h1 {
+  font-size: 32px;
+  margin-top: 20px;
+  color: #c79863;
+}
+
+.CoffeeSection h2 {
+  font-size: 16px;
+  font-family: "Poppins";
+  color: #bfbfbf;
+}
+
+.CoffeeBoxIcon {
+  border: 1px solid #c79863;
+  padding: 18px;
+}
+
+.CoffeeBoxIcon i {
+  font-size: 35px;
+  color: #c79863;
+}
+
+.CoffeeProducts {
+  padding: 90px;
+}
+
+.coffee-row,
+.About-Us-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.coffee-column,
+.About-Us-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.coffee-column img {
+  margin-top: 60px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.coffee-column h2 {
+  font-size: 22px;
+  font-family: "Poppins";
+  color: whitesmoke;
+}
+
+.coffee-subheaders {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.coffee-subheaders h2 {
+  margin-top: 18px;
+}
+
+.coffee-subheaders h3 {
+  font-size: 18px;
+}
+
+.coffee-subheaders p {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 14px;
+  color: #808080;
+}
+
+.BestCoffeeHeading,
+.ProductHeading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BestCoffeeHeading h1,
+.ProductHeading h1 {
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  top: -40px;
+}
+
+.BestCoffeeHeading h2
+, .ProductHeading h2 {
+  font-size: 60px;
+  font-family: "Parisienne", cursive;
+  color: #c79863;
+}
+
+.BookTableBanner {
+  background-color: black;
+}
+
+.BooktableForm {
+  padding: 60px;
+  padding-bottom: 40px;
+}
+
+.BooktableForm h1 {
+  font-size: 28px;
+  margin-bottom: 50px;
+}
+
+.TablebookingForm input {
+  font-size: 14px !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid gray !important;
+  color: #b8b8b8 !important;
+  height: 30px;
+  padding: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.TablebookingForm input::placeholder {
+  color: #b8b8b8 !important;
+  font-size: 14px !important;
+}
+
+.TablebookingForm button {
+  color: white;
+  border: none;
+  width: 100%;
+  background-color: #c79863;
+}
+
+.TablebookingForm textarea::placeholder {
+  color: #b8b8b8 !important;
+  font-weight: normal;
+}
+
+.orderBtn {
+  font-size: 14px;
+  padding: 14px;
+  background-color: transparent;
+  color: #c79863;
+  border: 1px solid #c79863;
+  transition: all 0.5s ease;
+}
+
+.orderBtn:hover {
+  background-color: #c79863;
+  color: white;
+  outline: none;
+}
+
+.footerSection {
+  background-color: #120f0f;
+}
+
+.About-Us-row {
+  background-color: #120f0f;
+  padding: 60px;
+}
+
+.About-Us-column {
+  margin: 20px 0;
+}
+
+.About-Us-column h4 {
+  font-family: "Poppins";
+  color: white;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+
+.About-Us-column p {
+  font-family: "Poppins";
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-bottom: 30px;
+  padding-right: 10px;
+}
+
+.About-Us-Icons {
+  margin-top: 60px;
+  opacity: 0;
+}
+
+.About-Us-Icons img {
+  width: 45px;
+  margin-right: 15px;
+  transition: all 0.5s ease;
+}
+
+.About-Us-Icons img:hover {
+  transform: translateY(-10px);
+}
+
+.blogText {
+  margin-bottom: 40px;
+}
+
+.blogText p {
+  margin-bottom: 10px;
+}
+
+.blogText div span {
+  color: #808080;
+  margin-right: 10px;
+}
+
+.blogText div {
+  font-size: 15px;
+}
+
+.footerIcon {
+  margin-right: 10px;
+}
+
+.footerIcon i {
+  color: white;
+}
+
+.menuText {
+  text-align: center;
+  margin: 0;
+  color: gray;
+  position: relative;
+  top: -30px;
+  padding: 0;
+  font-size: 15px;
+}
+
+.menuImage {
+  background-image: url("../images/pexels-fallon-michael-3551717.jpg");
+}
+
+.menuImage1 {
+  background-image: url("../images/pexels-pixabay-45202.jpg");
+}
+
+.menuImage,
+.menuImage1 {
+  height: 200px;
+  width: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.menus p {
+  margin: 30px 25px 25px;
+  text-align: center;
+  color: silver;
+}
+
+.MenuItems {
+  text-decoration: none;
+  color: #c79863;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.MenuItems:hover {
+  text-decoration: none;
+  color: #e08f33;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
+  grid-gap: 40px;
+  padding: 60px 0;
+}
+
+.cards {
+  grid-column: 2 / span 12;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(auto, 60px));
+  grid-gap: 40px;
+}
+
+.Card {
+  grid-column-end: span 4;
+  display: flex;
+  flex-direction: column;
+  background-color: #2424247c;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.Card:hover {
+  transform: translateY(-7px);
+}
+
+.card_image-container {
+  width: 100%;
+  height: 300px;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card_image-container img {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards-content,
+.cards-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-title {
+  margin-top: 22px;
+}
+
+.cards-title h1 {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.cards-info {
+  padding: 8px;
+}
+
+.cards-info p {
+  text-align: center;
+  font-size: 14px;
+  color: #c2c2c2;
+  margin-top: 10px;
+}
+
+.cards-info button {
+  margin: 10px 0 20px;
+}
+
+.productBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.productButton {
+  border: none;
+  border-bottom: 2px solid #c79863;
+  color: #c79863;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  outline: none;
+  padding: 15px;
+}
+
+.productButton:hover {
+  background-color: #c79863;
+  color: #222222;
+  outline: none;
+}
+
+.productButton:focus {
+  outline: 0;
+}
+
+.productButton.current {
+  background-color: #c79863;
+  color: #222222;
+}
+
+.show {
+  display: block;
+}
+
+.menuHeader {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.menuHeader p {
+  font-size: 20px;
+}
+
+.menuHeader h1 {
+  font-family: "Parisienne", cursive;
+  color: #c79863;
+  font-size: 60px;
+}
+
+.productList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.productImageList img {
+  border-radius: 500px;
+  border: 3px solid #c79863;
+  margin-left: 20px;
+}
+
+li {
+  list-style-type: none;
+  font-size: 18px;
+  color: #d6d6d6;
+}
+
+li p {
+  color: #808080;
+  font-size: 14px;
+}
+
+.productHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #c79863;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+.productHeader hr {
+  width: 300px;
+}
+
+.productHeader h1 {
+  font-family: "Parisienne", cursive;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  .Card {
+    grid-column-end: span 6;
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .About-Us-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner,
+  .discoverPageStory {
+    position: static;
+  }
+  .sliderInfo {
+    display: block;
+  }
+  .discoverPage {
+    height: 400px;
+  }
+  .menuSection p,
+  .menuHeadings h2,
+  .menuHeadings h1 {
+    text-align: left;
+  }
+  .image-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .coffee-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .About-Us-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  main {
+    grid-gap: 20px;
+  }
+  .Card {
+    grid-column-end: span 12;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .coffee-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .coffee-column img {
+    width: 100%;
+    height: 400px;
+  }
+  .About-Us-row {
+    padding: 10px;
+  }
+  .menus p {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    grid-template-columns: 10px repeat(6, 1fr) 10px;
+    grid-gap: 30px;
+  }
+  .cards {
+    grid-column: 2 / span 6;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+  }
+  .Card {
+    grid-column-end: span 6;
+  }
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 6vh;
+  width: 100%;
+  padding: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  font-family: "Poppins", cursive;
+  text-decoration: none;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo:hover {
+  color: #e7912f;
+  text-decoration: none;
+}
+
+.logo h1 {
+  font-size: 25px;
+}
+
+.line {
+  position: absolute;
+  top: 90px;
+  height: 1px;
+  width: 100%;
+  background-color: whitesmoke;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.navlinks li {
+  list-style-type: none;
+}
+
+.navlinks a {
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.navlinks a:hover {
+  color: #c79863;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  z-index: 8000;
+}
+
+nav.sticky {
+  background-color: black;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
