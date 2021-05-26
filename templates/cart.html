@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container">
+  <div class="cartSection">
+    <div class="CartHeader">Your Bag</div>
+    <a class="btn shoppingBtn" href="/menu">&#x2190; Continue Shopping</a>
+    <div class="row">
+      <div class="col-md-8">
+        <br />
+        <div class="box-element">
+          <div class="cart-row cartTableInfo">
+            <div style="flex: 1"></div>
+            <div style="flex: 2"><strong>Item</strong></div>
+            <div style="flex: 1"><strong>Price</strong></div>
+            <div style="flex: 1"><strong>Quantity</strong></div>
+            <div style="flex: 1"><strong>Total</strong></div>
+          </div>
+
+          {% for item in items %}
+
+          <div class="cart-row cartItems">
+            <div style="flex: 1">
+              <img
+                class="row-image"
+                src="{{item.product.imageUrl}}"
+                width="70"
+              />
+            </div>
+            <div style="flex: 2">
+              <p>{{item.product.name}}</p>
+              <p>
+                <button class="deleteBtn"><i class="far fa-trash-alt"></i> Delete</button>
+              </p>
+            </div>
+            <div style="flex: 1">
+              <p>${{item.product.price|floatformat:2}}</p>
+            </div>
+            <div style="flex: 1">
+              <p class="quantity">{{item.quantity}}</p>
+              <div class="quantity">
+                <img
+                  data-product=""
+                  data-action="add"
+                  class="chg-quantity update-cart"
+                  src="../static/images/arrow-up.png"
+                />
+
+                <img
+                  data-product=""
+                  data-action="remove"
+                  class="chg-quantity update-cart"
+                  src="../static/images/arrow-down.png"
+                />
+              </div>
+            </div>
+            <div style="flex: 1"><p>${{item.get_total}}</p></div>
+          </div>
+
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col-md CartSummary">
+        <div>
+          <h2>Cart Totals</h2>
+          <p>Items : <strong> {{order.get_cart_items}} </strong></p>
+          <p>
+            SubTotals : <strong>{{order.get_cart_total|floatformat:2}}</strong>
+          </p>
+          <p>
+            Discount : <strong>{{order.get_discount|floatformat:2}}</strong>
+          </p>
+          <hr />
+          <p>Total : <strong>${{order.get_total|floatformat:2}}</strong></p>
+        </div>
+        <a class="btn shoppingBtn" href="/checkout">Checkout &#x2192;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

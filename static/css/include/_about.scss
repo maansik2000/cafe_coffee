@@ -1,0 +1,83 @@
+.testimonial {
+  text-align: center;
+  padding: 85px 50px 45px 70px;
+  margin: 70px 15px 35px;
+  background: #f9f9f9;
+  box-shadow: 8px 4px 0 0 #c79863;
+  position: relative;
+}
+.testimonial .pic {
+  height: 120px;
+  width: 120px;
+  margin: 0 auto;
+  position: absolute;
+  top: -60px;
+
+  left: 0;
+  right: 0;
+}
+.testimonial .pic img {
+  width: 100%;
+  border: 10px solid #c79863;
+  border-radius: 500px;
+  height: auto;
+}
+.testimonial .description {
+  font-size: 15px;
+  color: #757575;
+  line-height: 27px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.aboutIcon {
+  font-size: 32px;
+  color: #c79863;
+  position: absolute;
+  top: 45px;
+  left: 40px;
+}
+
+.testimonial .testimonial-profile {
+  position: relative;
+  margin: 20px 0 10px 0;
+}
+.testimonial .testimonial-profile:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #c79863;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+}
+.testimonial .title {
+  display: inline-block;
+  font-size: 18px;
+  color: #c79863;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.testimonial .post {
+  display: inline-block;
+  font-size: 15px;
+  color: #757575;
+  text-transform: capitalize;
+}
+
+.aboutTitle {
+  text-align: center;
+  margin-top: 70px;
+  h1 {
+    font-family: "Parisienne", cursive;
+    color: #c79863;
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 40px;
+    position: relative;
+    top: -20px;
+  }
+}

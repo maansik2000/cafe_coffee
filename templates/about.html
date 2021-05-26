@@ -1,4 +1,156 @@
-{% extends 'base.html' %}
-{% block body %}
-    <h1>this is about html</h1>
+{% extends 'base.html' %} {% block body %}
+<div class="container-fluid px-0">
+  <div class="mug1">
+    <div class="caption aboutInfo caption-animation">
+      <h3>ABOUT US</h3>
+      <p><a href="/">Home</a>/ About</p>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid discover">
+  <div class="row">
+    <div class="col-md-6 discoverPage">
+      <!-- <img src="../static/images/pexels-jonathan-borba-2878707.jpg" width="750" height="700"> -->
+    </div>
+    <div class="col-md-6 discoverPageStory">
+      <div class="discoverPageSection">
+        <h1 class="discoverPageHeader">Discover</h1>
+        <h2 class="discoveryPageSubHeader">Pick Up/Dine in</h2>
+        <p>
+          We know everyone is busy in their life, so our goal is to provide you
+          Delicious, handcrafted beverages and great-tasting food. The secret to
+          making life better. If you are getting late for work just order from
+          your home, and just pick your order from the shop in just a couple of
+          seconds. We care for you that's why, we bring the best quality coffee
+          to you so that you won't get late. You can pick up your order or just dine in.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid Coffee-Branch">
+  <div class="row">
+    <div class="col CoffeeSection">
+      <div class="CoffeeBoxIcon">
+        <i class="fas fa-mug-hot"></i>
+      </div>
+      <h1>100</h1>
+      <h2>Coffee Branches</h2>
+    </div>
+    <div class="col CoffeeSection">
+      <div class="CoffeeBoxIcon">
+        <i class="fas fa-award"></i>
+      </div>
+      <h1>85</h1>
+      <h2>Number of customer</h2>
+    </div>
+
+    <div class="col CoffeeSection">
+      <div class="CoffeeBoxIcon">
+        <img
+          src="../static/images/coffee (1).png"
+          alt="iconCoffee"
+          width="50"
+        />
+      </div>
+      <h1>10567</h1>
+      <h2>Happy Customer</h2>
+    </div>
+    <div class="col CoffeeSection">
+      <div class="CoffeeBoxIcon">
+        <img
+          src="../static/images/customer (1).png"
+          alt="customerIcon"
+          width="50"
+        />
+      </div>
+      <h1>900</h1>
+      <h2>Staff</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="aboutTitle">
+      <h1>Testimony</h1>
+      <h2>Our Customer Says</h2>
+    </div>
+    <div class="col-md-12">
+      <div id="testimonial-slider" class="owl-carousel">
+        <div class="testimonial">
+          <div class="pic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDeJb9zyT6u0HGwwsG7X_yrYL3veLoul1eyw&usqp=CAU"
+            />
+          </div>
+          <span class="aboutIcon"><i class="fas fa-quote-left"></i></span>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            commodi dolorum earum fugiat, fugit hic id, ipsum laborum minus
+            nostrum numquam perspiciatis saepe velit.
+          </p>
+          <div class="testimonial-profile">
+            <h3 class="title">williamson-</h3>
+            <span class="post">Web Designer</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="pic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHxjZOBsm6Bb_zLpzsDMuqdJF3Yy4dm467RA&usqp=CAU"
+            />
+          </div>
+          <span class="aboutIcon"><i class="fas fa-quote-left"></i></span>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            commodi dolorum earum fugiat, fugit hic id, ipsum laborum minus
+            nostrum numquam perspiciatis saepe velit.
+          </p>
+          <div class="testimonial-profile">
+            <h3 class="title">Kristina-</h3>
+            <span class="post">Customer</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="pic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZkCrW2jLYWy7448AYGPhYoyUYnHqgXmT6ug&usqp=CAU"
+            />
+          </div>
+          <span class="aboutIcon"><i class="fas fa-quote-left"></i></span>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            commodi dolorum earum fugiat, fugit hic id, ipsum laborum minus
+            nostrum numquam perspiciatis saepe velit.
+          </p>
+          <div class="testimonial-profile">
+            <h3 class="title">Steve Thomas-</h3>
+            <span class="post">Web Developer</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="pic">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ZtdYXkMgrNdcu7NmR0odsEnZ2CQjPYUGhA&usqp=CAU"
+            />
+          </div>
+          <span class="aboutIcon"><i class="fas fa-quote-left"></i></span>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
+            commodi dolorum earum fugiat, fugit hic id, ipsum laborum minus
+            nostrum numquam perspiciatis saepe velit.
+          </p>
+          <div class="testimonial-profile">
+            <h3 class="title">Steve Thomas-</h3>
+            <span class="post">Web Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END OF TESTIMONIALS -->
 {% endblock body %}

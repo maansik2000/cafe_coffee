@@ -1,4 +1,8 @@
-
+@media screen and (max-width: 1024px) {
+  .navlinks {
+    width: 60%;
+  }
+}
 
 @media screen and (max-width: 1000px) {
   .Card {
@@ -45,15 +49,13 @@
     flex: 100%;
     max-width: 100%;
   }
-  main{
+  main {
     grid-gap: 20px;
   }
   .Card {
     grid-column-end: span 12;
   }
-
 }
-
 
 @media screen and (max-width: 680px) {
   .coffee-column {
@@ -75,16 +77,20 @@
 }
 
 @media screen and (max-width: 600px) {
-  main{
+  main {
     grid-template-columns: 10px repeat(6, 1fr) 10px;
     grid-gap: 30px;
   }
-  .cards{
-    grid-column:2 / span 6 ;
+  .cards {
+    grid-column: 2 / span 6;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 30px;
   }
-.Card{
-  grid-column-end: span 6;
+  .Card {
+    grid-column-end: span 6;
+  }
 }
+
+.nav-active {
+  transform: translateX(0%);
 }

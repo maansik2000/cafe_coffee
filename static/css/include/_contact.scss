@@ -1,13 +1,15 @@
-.contactInfo p {
+.contactInfo p,
+.aboutInfo p {
   color: gray;
 }
 
-.contactInfo a {
+.contactInfo a,
+.aboutInfo a {
   text-decoration: none;
   color: whitesmoke;
   margin-right: 10px;
 }
-.contact  {
+.contact {
 opacity: 0;
 }
 

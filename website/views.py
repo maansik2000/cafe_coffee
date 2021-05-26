@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse
-from website.models import Contact, AskIndex, Product
+from website.models import *
 from django.contrib import messages
 from .models import *
 
@@ -12,13 +12,14 @@ def index(request):
     context = {'product':foodItem}
     
     if request.method == "POST":
-        FirstName = request.POST.get('FirstName')
-        LastName = request.POST.get('LastName')
+        Fname = request.POST.get('FirstName')
+        Lname = request.POST.get('LastName')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
         desc = request.POST.get('desc')
-        askIndex = AskIndex(FirstName = FirstName,LastName = LastName, email = email, phone = phone, desc = desc)
-        askIndex.save()
+        
+        query_section = QuerySection(FirstName = Fname, LastName = Lname,email=email, desc= desc, phone=phone )
+        query_section.save()
         messages.success(request,"We will get back to you as soon as possible")
 
     return render(request,'index.html',context)
@@ -59,3 +60,33 @@ def contact(request):
         messages.success(request,"your message has been sent")
     return render(request,'contact.html')
     
+
+def Cart(request):
+    
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer = customer,complete = False)
+        items = order.orderitem_set.all()    #get all the order items
+        print(items[1].product.name)
+
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cart_items':0,'get_discount' : 0,'get_total' :0}
+    
+    context = {'items' : items,'order':order}
+    return render(request,'cart.html',context)
+
+
+def checkout(request):
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer = customer,complete = False)
+        items = order.orderitem_set.all()    #get all the order items
+        print(items[1].product.name)
+
+    else:
+        items = []
+        order = {'get_cart_total':0, 'get_cart_items':0,'get_discount' : 0,'get_total' :0}
+    
+    context = {'items' : items,'order':order}
+    return render(request,'checkout.html',context)

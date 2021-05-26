@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block body %}
 <div class="container-fluid px-0">
   <!-- Slider 1 -->
-  <div class="owl-carousel owl-theme">
+  <div class="owl-carousel owl-theme" id="indexSlider">
     <div class="mug1">
       <div class="caption caption-animation">
         <h4>Welcome</h4>
@@ -77,8 +77,8 @@
           <span class="sliderInfoIcon"><i class="far fa-clock"></i></span>
         </div>
         <div>
-          <h6> Open Monday-Friday</h6>
-          <p>8:00am - 9:00pm</p>
+          <h6> Open Monday-Sunday</h6>
+          <p>8:00am - 12:00am/p>
         </div>
       </div>
 
@@ -107,7 +107,9 @@
             </div>
             <div class="form-group bookingForm">
 
-              <input type="phone" class="form-control " id="phone" aria-describedby="phone" placeholder=" Phone">
+              <div class="form-group">
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" />
+              </div>
             </div>
             <div class="form-group bookingForm">
               <textarea class="form-control Message" name="desc" id="message" cols="50" rows="2"
@@ -133,10 +135,12 @@
         <div class="discoverPageSection">
           <h1 class="discoverPageHeader">Discover</h1>
           <h2 class="discoveryPageSubHeader">Our Goal</h2>
-          <p>It’s true. The perfect cup of coffee and a wholesome, delicious snack can make your day. 
-            So we make sure everything you choose is of the finest quality. 
-            Because really, isn’t that how life should be? We know everyone is busy in their life, so our goal is to provide you Delicious, handcrafted beverages and great-tasting food. 
-            The secret to making life better. 
+          <p> We know everyone is busy in their life, so our goal is to provide you
+            Delicious, handcrafted beverages and great-tasting food. The secret to
+            making life better. If you are getting late for work just order from
+            your home, and just pick your order from the shop in just a couple of
+            seconds. We care for you that's why, we bring the best quality coffee
+            to you so that you won't get late. You can pick up your order or just dine in. 
           </p>
         </div>
       </div>
@@ -218,14 +222,14 @@
         <div class="CoffeeBoxIcon">
           <i class="fas fa-mug-hot"></i>
         </div>
-        <h1>100</h1>
+        <h1>5</h1>
         <h2>Coffee Branches</h2>
       </div>
       <div class="col CoffeeSection">
         <div class="CoffeeBoxIcon">
           <i class="fas fa-award"></i>
         </div>
-        <h1>85</h1>
+        <h1>85425</h1>
         <h2>Number of customer</h2>
       </div>
 
@@ -233,14 +237,14 @@
         <div class="CoffeeBoxIcon">
           <img src="../static/images/coffee (1).png" alt="iconCoffee" width="50">
         </div>
-        <h1>10567</h1>
-        <h2>Happy Customer</h2>
+        <h1>24/7</h1>
+        <h2>Service</h2>
       </div>
       <div class="col CoffeeSection">
         <div class="CoffeeBoxIcon">
           <img src="../static/images/customer (1).png" alt="customerIcon" width="50">
         </div>
-        <h1>900</h1>
+        <h1>100</h1>
         <h2>Staff</h2>
       </div>
     </div>

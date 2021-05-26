@@ -1,0 +1,173 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container">
+  <div class="cartSection">
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="box-element" id="form-wrapper">
+          <h1>Billing Information</h1>
+          <hr />
+          <form class="form" method="post">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fname"
+                    name="fname"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lname"
+                    name="lname"
+                    placeholder="last name"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md">
+                <div class="select-icon">
+                  <i class="fas fa-chevron-circle-down"></i>
+                </div>
+                <div class="form-group form-field box">
+                  <select>
+                    <option value="0">Dallas</option>
+                    <option value="1">New York</option>
+                    <option value="2">San Francisco</option>
+                    <option value="3">Chicago</option>
+                    <option value="4">Los Angeles</option>
+                    <option value="5">Boston</option>
+                    <option value="6">seattle</option>
+                    <option value="7">Austin</option>
+                    <option value="8">San Diego</option>
+                    <option value="9">New Orleans</option>
+                    <option value="10">Atlanta</option>
+                    <option value="11">Portland</option>
+                    <option value="12">Miami</option>
+                    <option value="13">Las Vegas</option>
+                    <option value="14">Omaha</option>
+                    <option value="15">Orlando</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <input
+                    type="time"
+                    class="form-control"
+                    id="time timepicker"
+                    name="time"
+                    placeholder="Pickup Time"
+                    value="12:00"
+                  />
+                </div>
+              </div>
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="time"
+                    name="time"
+                    placeholder="ZipCode"
+                    maxlength="6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <p class="noteid">
+              **note: Please choose time 15 min before you come and pick your
+              order
+            </p>
+
+            <div class="row">
+              <div class="col-md">
+                <div class="form-group form-field">
+                  <button class="btn btn-success checkout">Continue</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="orderSummary box-element">
+          <a href="/cart" class="btn CartBtn">&#x2190;Back to Cart</a>
+          <hr />
+          <h2>Order Summary</h2>
+          <hr />
+          {% for item in items %}
+          <div class="cart-row cartItems">
+            <div style="flex: 2">
+              <img
+                class="row-image"
+                src="{{item.product.imageUrl}}"
+                width="70"
+              />
+            </div>
+            <div style="flex: 3"><p>{{item.product.name}}</p></div>
+            <div style="flex: 2">
+              <p>${{item.product.price|floatformat:2}}</p>
+            </div>
+            <div style="flex: 1">
+              <p class="quantity">x{{item.quantity}}</p>
+            </div>
+          </div>
+          {% endfor %}
+          <br />
+          <h5>Items: <strong>{{order.get_cart_items}}</strong></h5>
+          <h5>Total: <strong>${{order.get_total|floatformat:2}}</strong></h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-7">
+        <div class="payment hidden">
+          <small>Paypal Options</small>
+          <!--<button id="make-payment">Make payment</button>-->
+          <div id="paypal-button-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
