@@ -1,4 +1,4 @@
-var owl = $(".owl-carousel");
+var owl = $("#indexSlider");
 owl.owlCarousel({
   loop: true,
   nav: false,
@@ -16,6 +16,31 @@ owl.owlCarousel({
       items: 1,
     },
   },
+});
+
+$(document).ready(function () {
+  $("#testimonial-slider").owlCarousel({
+    items: 2,
+    itemsDesktop: [1000, 2],
+    itemsDesktopSmall: [979, 2],
+    itemsTablet: [768, 2],
+    itemsMobile: [650, 1],
+    pagination: true,
+    navigation: false,
+    slideSpeed: 1000,
+    autoPlay: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 2,
+      },
+    },
+  });
 });
 
 $(document).ready(function () {
@@ -116,3 +141,11 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " current";
   });
 }
+
+const navSlide = () => {
+  const burger = document.querySelector("burger");
+  const nav = document.querySelector(".navlinks");
+  burger.addEventListener("click", () => {
+    console.log("hello");
+  });
+};

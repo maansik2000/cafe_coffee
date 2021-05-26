@@ -1,7 +1,9 @@
 nav {
   position: fixed;
+  top: 0;
   z-index: 999;
   display: flex;
+  top: 0;
   justify-content: space-around;
   align-items: center;
   min-height: 6vh;
@@ -62,8 +64,8 @@ nav {
 }
 
 .burger {
-  display: none;
   cursor: pointer;
+  display: none;
 }
 
 .burger div {
@@ -71,13 +73,28 @@ nav {
   height: 3px;
   background-color: white;
   margin: 5px;
-  z-index: 8000;
+  z-index: 9000000;
 }
 
 nav.sticky {
   background-color: black;
 }
 
-.nav-active {
-  transform: translateX(0%);
+.nav_bar {
+  margin-bottom: 120px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cart-total {
+  color: white;
+  background: #c79863;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
 }

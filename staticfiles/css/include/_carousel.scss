@@ -1,112 +1,103 @@
 .owl-carousel {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .mug {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../images/pexels-quang-nguyen-vinh-2133535.jpg");
-  
-    height: 900px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .mug1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../images/pexels-lisa-861090.jpg");
-  
-    height: 900px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .mug2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("../images/pexels-afta-putta-gunawan-702251.jpg");
-  
-    height: 900px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .caption {
-    min-height: 130vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .caption h4 {
-    font-family: "Parisienne", cursive;
-    font-size: 30px;
-    color: orange;
-    margin-bottom: 25px;
-  }
-  
-  .caption h3 {
-    font-family: "Josefin Sans", sans-serif;
-    font-size: 38px;
-    letter-spacing: 0.3rem;
-  }
+  position: relative;
+  z-index: 1;
+}
 
-    
-  .caption p {
-    margin-top: 22px;
-    font-size: 18px;
-    font-family: "Josefin Sans", sans-serif;
-  }
+.mug {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/pexels-quang-nguyen-vinh-2133535.jpg");
+}
+.mug1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/pexels-lisa-861090.jpg");
+}
+.mug2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/pexels-afta-putta-gunawan-702251.jpg");
+}
 
-    
+.mug1,
+.mug,
+.mug2 {
+  height: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.caption {
+  min-height: 130vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.caption h4 {
+  font-family: "Parisienne", cursive;
+  font-size: 30px;
+  color: orange;
+  margin-bottom: 25px;
+}
+
+.caption h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 38px;
+  letter-spacing: 0.3rem;
+}
+
+.caption p {
+  margin-top: 22px;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+button {
+  padding: 15px 32px;
+  border: 1px solid whitesmoke;
+  margin: 25px 8px;
+  background-color: transparent;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+button a:hover {
+  color: white;
+}
+
+.orderBtns {
   button {
-    padding: 15px 32px;
-    border: 1px solid whitesmoke;
-    margin: 25px 8px;
-    background-color: transparent;
-  }
-  
-  button a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-  }
-  
-  button a:hover {
-    color: white;
-  }
-
-
-  .orderBtns{
-    button{
-      border: 1px solid #c79863;
-      color: #c79863;
-      transition: all 0.3s ease;
-      &:hover{
-        text-decoration: none;
-        background-color: #c79863;
-        color: white;
-      }
-      &:focus {
-        outline: 0;
-      }
-    }
-  }
-  
-  
-  .menuBtns{
-    button{
-      border: none;
+    border: 1px solid #c79863;
+    color: #c79863;
+    transition: all 0.3s ease;
+    &:hover {
+      text-decoration: none;
+      background-color: #c79863;
       color: white;
-      background: #b97a33;
-      transition: all 0.3s ease;
-      &:hover{
-        text-decoration: none;
-        background-color: #f08a17;
-      }
+    }
+    &:focus {
+      outline: 0;
     }
   }
-  
+}
+
+.menuBtns {
+  button {
+    border: none;
+    color: white;
+    background: #b97a33;
+    transition: all 0.3s ease;
+    &:hover {
+      text-decoration: none;
+      background-color: #f08a17;
+    }
+  }
+}
