@@ -268,7 +268,7 @@
             <h2>{{product.name}}</h2>
             <p>{{product.description}}</p>
             <h3>${{product.price}}</h3>
-            <button class="orderBtn" >Add to cart</button>
+            <button class="orderBtn update-Cart " data-product={{product.id}} data-action="add" >Add to cart</button>
           </div>
         </div>
         {% endfor %}

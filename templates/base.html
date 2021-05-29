@@ -6,10 +6,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
@@ -23,6 +22,7 @@
 
   <link rel="stylesheet" href="../static/css/owl.theme.default.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
   <!--Custom CSS-->
   <link rel="stylesheet" href="../static/css/style.css" />
   <title>{% block title %}{% endblock title %} Coffee blend</title>
@@ -31,31 +31,78 @@
 
 <body>
 
-    <nav class="nav_bar">
-      <div>
-        <a href="/" class="logo">
-          <h1>Coffee</h1>
-          <h5>Blend</h5>
-        </a>
-      </div>
-      
-      <ul class="navlinks" >
-        <li><a href="/">Home</a></li>
-        <li><a href="/menu">Menu</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li class="icon" ><a href="/cart" id="iconsvg"><img src="../static/images/Group 16.svg"   alt="cart" onclick="navslide()" width="20">
-          </a>
-          <p id="cart-total">3</p></li>
-      </ul>
+  <!-- <nav class="nav_bar sticky-top">
+    <div>
+      <a href="/" class="logo">
+        <h1>Coffee</h1>
+        <h5>Blend</h5>
+      </a>
+    </div>
 
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+    <ul class="navlinks">
       </div>
-      <div class="line"></div>
-    </nav>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+      
+      <li><button class="btn loginBtn">Login</button></li>
+
+    </ul>
+
+  </nav> -->
+
+  <nav class="nav_bar navbar navbar-expand-lg fixed-top">
+
+    <div>
+      <a href="/" class="logo">
+        <h1>Coffee</h1>
+        <h5>Blend</h5>
+      </a>
+    </div>
+
+    <div>
+
+      <button class="navbar-toggler navbar-dark float-right" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon  navbar-dark"></span>
+      </button>
+      <div class="cartIcon2 .d-inline-flex navbar-show navbar-toggler togglerBtn">
+        <a href="/cart"><img src="../static/images/Group 16.svg" alt="cart" width="20"></a>
+        <p id="cart-total">{{cartItems}}</p>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto navlinks">
+        <li class="nav-item active">
+          <a href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/menu">Menu</a>
+        </li>
+        <li class="nav-item active">
+          <a href="/about">About</a>
+        </li>
+        <li class="nav-item active"><a href="/contact">Contact</a></li>
+        
+        <li class="nav-item active navbar-hidden">
+          <div class="cartIcon2 .d-inline-flex">
+            <a href="/cart"><img src="../static/images/Group 16.svg" alt="cart" width="20"></a>
+            <p id="cart-total">{{cartItems}}</p>
+          </div>
+        </li>
+        <li class="nav-item active " id="signUpBtn">
+          <a href="/login" class="btn loginBtn">Login</a>
+        </li>
+        
+        <span class="navbar-text" id="userLoggedIn">
+          {{request.user}},
+        <a href="/logout"><i class="fas fa-sign-out-alt"></i></a></span>
+      </ul>
+    </div>
+
+  </nav>
 
 
   {% if messages %}
@@ -118,23 +165,53 @@
       </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    ></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="../static/js/owl.carousel.min.js"></script>
     <script src="../static/js/owl.carousel.js"></script>
     <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
-    ></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" ></script>
-    <script src="../static/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <script>
+      var user = '{{request.user}}'
+
+      if (user == "AnonymousUser") {
+      var userloggedIn = document.getElementById("userLoggedIn")
+      userloggedIn.classList.toggle('hide')
+    } else {
+      var signUpBtn = document.getElementById('signUpBtn')
+      signUpBtn.classList.toggle('hide')
+    }
+
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("nav");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+
+      function getToken(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+          const cookies = document.cookie.split(';');
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+              cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+      const csrftoken = getToken('csrftoken');
+    </script>
+    <script type="text/javascript" src="../static/js/app.js"></script>
 </body>
 
 </html>

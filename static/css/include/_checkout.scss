@@ -6,16 +6,6 @@
   }
 }
 
-.form-field input {
-  border: 1px solid rgb(78, 78, 78) !important;
-  padding: 12px 15px !important;
-  color: #9e9e9e !important;
-  &:focus {
-    border: 1px solid rgb(196, 131, 12) !important;
-  }
-  background-color: transparent !important;
-}
-
 .checkout {
   width: 100%;
   padding: 15px;
@@ -43,14 +33,14 @@
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(25%, 10%);
-  width: 20%;
-  height: 100%;
+  transform: translate(-32%, 2%);
+  width: 40px;
+  height: 48px;
   text-align: center;
   font-size: 24px;
   line-height: 45px;
   color: white;
-
+  background: rgb(70, 70, 70);
   pointer-events: none;
 }
 
@@ -110,5 +100,48 @@
   border: none;
   &:focus {
     outline: none;
+  }
+}
+
+.timepicker {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  &:focus {
+    border: 1px solid rgb(196, 131, 12) !important;
+  }
+}
+
+.input_time {
+  div {
+    position: absolute;
+    top: -0px;
+    right: 12px;
+    height: 50px;
+    text-align: centers;
+    font-size: 22px;
+    width: 40px;
+    padding: 8px;
+    background: rgb(121, 121, 121);
+  }
+}
+.form-field input {
+  border: 1px solid rgb(78, 78, 78) !important;
+  padding: 12px 15px !important;
+  color: #9e9e9e !important;
+  &:focus {
+    border: 1px solid rgb(196, 131, 12) !important;
+  }
+  background-color: transparent !important;
+}
+
+.paymentSection {
+  margin-bottom: 45px;
+}
+
+.payment {
+  padding: 20px;
+  p {
+    margin-bottom: 20px;
   }
 }

@@ -4,6 +4,7 @@
     <div class="col-md-12 menuHeader">
       <h1>Coffee Blend Drinks</h1>
       <p>Discover Our Best Drinks</p>
+  
     </div>
   </div>
   <div class="row">
@@ -16,11 +17,12 @@
         {% for product in product %} {% if product.category == "espresso" %}
         <ul class="productList">
           <li class="listItemAnimation">
-            {{product.name}} ................................${{product.price|floatformat:2}}
+            {{product.name}}
+            ................................${{product.price|floatformat:2}}
             <p>Lorem ipsum dolor sit amet.</p>
           </li>
           <div class="productImageList">
-            <img src="{{product.imageUrl}}" alt="list" width="75"/>
+            <img src="{{product.imageUrl}}" alt="list" width="75" />
           </div>
         </ul>
 
@@ -36,11 +38,12 @@
         {% for product in product %} {% if product.category == "drinks" %}
         <ul class="productList">
           <li class="listItemAnimation">
-            {{product.name}} ................................${{product.price|floatformat:2}}
+            {{product.name}}
+            ................................${{product.price|floatformat:2}}
             <p>Lorem ipsum dolor sit amet.</p>
           </li>
           <div class="productImageList">
-            <img src="{{product.imageUrl}}" alt="list" width="75"/>
+            <img src="{{product.imageUrl}}" alt="list" width="75" />
           </div>
         </ul>
 
@@ -54,11 +57,12 @@
         {% for product in product %} {% if product.category == "Frappuccino" %}
         <ul class="productList">
           <li class="listItemAnimation">
-            {{product.name}} ................................${{product.price|floatformat:2}}
+            {{product.name}}
+            ................................${{product.price|floatformat:2}}
             <p>Lorem ipsum dolor sit amet.</p>
           </li>
           <div class="productImageList">
-            <img src="{{product.imageUrl}}" alt="list" width="75"/>
+            <img src="{{product.imageUrl}}" alt="list" width="75" />
           </div>
         </ul>
 

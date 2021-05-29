@@ -10,7 +10,7 @@
 
 <!--Discover Our Menu-->
 
-<div class="container-fluid CoffeeProducts" id="Order_now">
+<div class="container-fluid" id="Order_now">
   <div class="col-12 BestCoffeeHeading">
     <h2>Discover</h2>
     <h1>Our Menu</h1>
@@ -80,9 +80,9 @@
       <div class="container">
         <main>
           <section class="cards" id="ProductSection1">
-            {% for product in product %} {% if product.category == "espresso" %}
+            {% for product in product %} 
+            {% if product.category == "espresso" %}
             <div class="Card drinks">
-              
               <div class="card_image-container">
                 <img src="{{product.imageUrl}}" alt="product-image1" />
               </div>
@@ -96,19 +96,23 @@
                     Saepe, minima.
                   </p>
                   <h5>${{product.price}}</h5>
-                  <button class="orderBtn">Add to cart</button>
+                  <button
+                    class="orderBtn update-Cart"
+                    data-product="{{product.id}}"
+                    data-action="add"
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
-            {% endif %} {% endfor %}
-
-            {% for product in product %} {% if product.category == "specials" %}
+            {% endif %} 
+            {% endfor %} 
+            {% for product in product %} 
+            {% if product.category == "specials" %}
             <div class="Card mainDish">
               <div class="card_image-container">
-                <img
-                  src="{{product.imageUrl}}"
-                  alt="product-image1"
-                />
+                <img src="{{product.imageUrl}}" alt="product-image1" />
               </div>
               <div class="cards-content">
                 <div class="cards-title">
@@ -120,19 +124,23 @@
                     countries Vokalia and Consonantia.
                   </p>
                   <h5>${{product.price}}</h5>
-                  <button class="orderBtn">Add to cart</button>
+                  <button
+                    class="orderBtn update-Cart"
+                    data-product="{{product.id}}"
+                    data-action="add"
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
-            {% endif %} {% endfor %}
-
-            {% for product in dessert %} {% if product.category == "desserts" %}
+            {% endif %} 
+            {% endfor %} 
+            {% for product in dessert %} 
+            {% if product.category == "desserts" %}
             <div class="Card desserts">
               <div class="card_image-container">
-                <img
-                  src="{{product.imageUrl}}"
-                  alt="product-image1"
-                />
+                <img src="{{product.imageUrl}}" alt="product-image1" />
               </div>
               <div class="cards-content">
                 <div class="cards-title">
@@ -144,11 +152,18 @@
                     countries Vokalia and Consonantia.
                   </p>
                   <h5>${{product.price}}</h5>
-                  <button class="orderBtn">Add to cart</button>
+                  <button
+                    class="orderBtn update-Cart"
+                    data-product="{{product.id}}"
+                    data-action="add"
+                  >
+                    Add to cart
+                  </button>
                 </div>
               </div>
             </div>
-            {% endif %} {% endfor %}
+            {% endif %} 
+            {% endfor %}
           </section>
         </main>
       </div>
