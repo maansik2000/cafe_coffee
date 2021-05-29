@@ -25,7 +25,7 @@
 }
 
 .chg-quantity {
-  width: 12px;
+  width: 14px;
   cursor: pointer;
   display: block;
   margin-top: 5px;
@@ -98,5 +98,12 @@
         float: right;
       }
     }
+  }
+}
+
+button {
+  outline: 0;
+  &:focus {
+    outline: 0;
   }
 }

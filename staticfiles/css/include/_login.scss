@@ -1,0 +1,60 @@
+.glass {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  width: 600px;
+  background: black;
+  background: linear-gradient(
+    to right bottom,
+    rgba(49, 49, 49, 0.7),
+    rgba(102, 102, 102, 0.3)
+  );
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  padding: 30px;
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  p {
+    text-align: center;
+    font-size: 14px;
+  }
+  a {
+    color: #c79863;
+    text-decoration: none;
+  }
+}
+
+.LoginSubmit {
+  margin: 0;
+  width: 100%;
+  border: none;
+  background: #c79863;
+  color: white;
+  font-size: 18px;
+}
+
+.loginBtn {
+  margin: 0;
+  padding: 6px 11px;
+  color: #c79863 !important;
+  border: 2px solid #c79863 !important;
+  border-radius: 15px !important;
+  &:hover {
+    background: #c79863 !important;
+    color: white !important;
+  }
+}
+
+#registerForm {
+  div {
+    input {
+      border: 1px solid rgb(85, 85, 85) !important;
+      padding: 10px !important;
+      &::placeholder {
+        color: gray !important;
+      }
+    }
+  }
+}

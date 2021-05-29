@@ -16,6 +16,7 @@ body {
   font-family: "Poppins";
 }
 
+
 :root {
   --animate-duration: 2s;
 }
@@ -27,7 +28,8 @@ body {
 @import "./include/footer";
 @import "./include/menu";
 @import "./include/about";
-@import "./include/navbar";
+@import "./include/login";
 @import "./include/mediaQueries";
 @import "./include/cart";
+@import "./include/navbar";
 @import "./include/checkout";

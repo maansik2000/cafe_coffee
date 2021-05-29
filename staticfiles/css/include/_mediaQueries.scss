@@ -1,12 +1,23 @@
-@media screen and (max-width: 1024px) {
-  .navlinks {
-    width: 60%;
-  }
-}
-
 @media screen and (max-width: 1000px) {
   .Card {
     grid-column-end: span 6;
+  }
+  .cartItems {
+    div {
+      p {
+        padding: 5px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cartIcon2 {
+    margin-top: 25px;
+  }
+  .navbar-hidden {
+    display: none;
   }
 }
 
@@ -40,10 +51,6 @@
     flex: 50%;
     max-width: 50%;
   }
-  .coffee-column {
-    flex: 50%;
-    max-width: 50%;
-  }
 
   .About-Us-column {
     flex: 100%;
@@ -55,16 +62,27 @@
   .Card {
     grid-column-end: span 12;
   }
+  .cartItems {
+    div {
+      p {
+        padding: 4px;
+        font-size: 14px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 680px) {
   .coffee-column {
     flex: 100%;
+    margin: 0;
     max-width: 100%;
+    padding: 0;
   }
   .coffee-column img {
     width: 100%;
-    height: 400px;
+    height: 250px;
+    padding: 0;
   }
   .About-Us-row {
     padding: 10px;
@@ -77,6 +95,18 @@
 }
 
 @media screen and (max-width: 600px) {
+  .coffee-column {
+    flex: 100%;
+
+    max-width: 120%;
+    padding: 0;
+    margin-top: 20px;
+  }
+  .coffee-column img {
+    width: 100%;
+    height: 160px;
+    padding: 0;
+  }
   main {
     grid-template-columns: 10px repeat(6, 1fr) 10px;
     grid-gap: 30px;
@@ -88,6 +118,39 @@
   }
   .Card {
     grid-column-end: span 6;
+  }
+  .cartItems {
+    div {
+      p {
+        font-size: 12px;
+        padding: 4px;
+      }
+    }
+  }
+  .menuHeadings h1 {
+    font-size: 50px;
+  }
+  .menuHeadings h2 {
+    font-size: 30px;
+  }
+  .menuText p {
+    width: 100%;
+    text-align: left;
+  }
+  .ProductHeading h1 {
+    font-size: 30px;
+  }
+  .ProductHeading h2 {
+    font-size: 60px;
+  }
+
+  .productButton {
+    font-size: 12px;
+    padding: 15px;
+  }
+
+  .user_card {
+    width: 700px;
   }
 }
 

@@ -1,3 +1,43 @@
+var updateBtns = document.querySelectorAll(".update-Cart");
+console.log(updateBtns);
+
+for (i = 0; i < updateBtns.length; i++) {
+  updateBtns[i].addEventListener("click", function () {
+    var productId = this.dataset.product;
+    var action = this.dataset.action;
+    console.log("productId:", productId, "Action:", action);
+
+    console.log("User:", user);
+
+    if (user == "AnonymousUser") {
+      alert("You need to login to add a item");
+    } else {
+      updateUserOrder(productId, action);
+    }
+  });
+}
+
+function updateUserOrder(productId, action) {
+  console.log("User is authenticated, sending the data.....");
+  var url = "/update_cart/";
+
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRFToken": csrftoken,
+    },
+    body: JSON.stringify({ productId: productId, action: action }),
+  })
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Data:", data);
+      location.reload();
+    });
+}
+
 var owl = $("#indexSlider");
 owl.owlCarousel({
   loop: true,
@@ -83,6 +123,7 @@ $(document).ready(function () {
   );
 });
 
+//timeline
 const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
 tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 1 });
 tl.fromTo(
@@ -91,11 +132,7 @@ tl.fromTo(
   { opacity: 1, y: 0, duration: 1 }
 );
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("nav");
-  header.classList.toggle("sticky", window.scrollY > 0);
-});
-
+//menuFilter
 filterSelection("drinks");
 function filterSelection(c) {
   var x, i;
@@ -141,11 +178,3 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " current";
   });
 }
-
-const navSlide = () => {
-  const burger = document.querySelector("burger");
-  const nav = document.querySelector(".navlinks");
-  burger.addEventListener("click", () => {
-    console.log("hello");
-  });
-};

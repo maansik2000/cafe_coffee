@@ -10,7 +10,7 @@ for (i = 0; i < updateBtns.length; i++) {
     console.log("User:", user);
 
     if (user == "AnonymousUser") {
-      console.log("user is not authenticated");
+      alert("You need to login to add a item");
     } else {
       updateUserOrder(productId, action);
     }

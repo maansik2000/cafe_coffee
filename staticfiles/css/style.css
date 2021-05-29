@@ -543,8 +543,8 @@ input:focus {
   top: -40px;
 }
 
-.BestCoffeeHeading h2
-, .ProductHeading h2 {
+.BestCoffeeHeading h2,
+.ProductHeading h2 {
   font-size: 60px;
   font-family: "Parisienne", cursive;
   color: #c79863;
@@ -683,6 +683,10 @@ input:focus {
   top: -30px;
   padding: 0;
   font-size: 15px;
+}
+
+#Order_now {
+  margin-top: 50px;
 }
 
 .menuImage {
@@ -994,117 +998,80 @@ li p {
   top: -20px;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  z-index: 999;
-  display: flex;
-  top: 0;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 6vh;
-  width: 100%;
-  padding: 10px 0;
-  transition: all 0.3s ease;
+.glass {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  width: 600px;
+  background: black;
+  background: linear-gradient(to right bottom, rgba(49, 49, 49, 0.7), rgba(102, 102, 102, 0.3));
+  border-radius: 1rem;
+  backdrop-filter: blur(1rem);
+  padding: 30px;
 }
 
-.logo {
-  font-family: "Poppins", cursive;
-  text-decoration: none;
-  color: orange;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.logo:hover {
-  color: #e7912f;
-  text-decoration: none;
-}
-
-.logo h1 {
-  font-size: 25px;
-}
-
-.line {
-  position: absolute;
-  top: 90px;
-  height: 1px;
-  width: 100%;
-  background-color: whitesmoke;
-  z-index: 1000;
-  opacity: 0.3;
-}
-
-.navlinks {
-  display: flex;
-  justify-content: space-around;
-  width: 40%;
-}
-
-.navlinks li {
-  list-style-type: none;
-}
-
-.navlinks a {
-  color: whitesmoke;
-  text-decoration: none;
-  letter-spacing: 3px;
-  font-size: 15px;
-  font-family: "Poppins", sans-serif;
-  transition: all 0.2s ease;
-}
-
-.navlinks a:hover {
-  color: #c79863;
-}
-
-.burger {
-  cursor: pointer;
-  display: none;
-}
-
-.burger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px;
-  z-index: 9000000;
-}
-
-nav.sticky {
-  background-color: black;
-}
-
-.nav_bar {
-  margin-bottom: 120px;
-}
-
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#cart-total {
-  color: white;
-  background: #c79863;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.glass h1 {
   text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
-@media screen and (max-width: 1024px) {
-  .navlinks {
-    width: 60%;
-  }
+.glass p {
+  text-align: center;
+  font-size: 14px;
+}
+
+.glass a {
+  color: #c79863;
+  text-decoration: none;
+}
+
+.LoginSubmit {
+  margin: 0;
+  width: 100%;
+  border: none;
+  background: #c79863;
+  color: white;
+  font-size: 18px;
+}
+
+.loginBtn {
+  margin: 0;
+  padding: 6px 11px;
+  color: #c79863 !important;
+  border: 2px solid #c79863 !important;
+  border-radius: 15px !important;
+}
+
+.loginBtn:hover {
+  background: #c79863 !important;
+  color: white !important;
+}
+
+#registerForm div input {
+  border: 1px solid #555555 !important;
+  padding: 10px !important;
+}
+
+#registerForm div input::placeholder {
+  color: gray !important;
 }
 
 @media screen and (max-width: 1000px) {
   .Card {
     grid-column-end: span 6;
+  }
+  .cartItems div p {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cartIcon2 {
+    margin-top: 25px;
+  }
+  .navbar-hidden {
+    display: none;
   }
 }
 
@@ -1135,10 +1102,6 @@ nav.sticky {
     flex: 50%;
     max-width: 50%;
   }
-  .coffee-column {
-    flex: 50%;
-    max-width: 50%;
-  }
   .About-Us-column {
     flex: 100%;
     max-width: 100%;
@@ -1149,16 +1112,23 @@ nav.sticky {
   .Card {
     grid-column-end: span 12;
   }
+  .cartItems div p {
+    padding: 4px;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 680px) {
   .coffee-column {
     flex: 100%;
+    margin: 0;
     max-width: 100%;
+    padding: 0;
   }
   .coffee-column img {
     width: 100%;
-    height: 400px;
+    height: 250px;
+    padding: 0;
   }
   .About-Us-row {
     padding: 10px;
@@ -1169,6 +1139,17 @@ nav.sticky {
 }
 
 @media screen and (max-width: 600px) {
+  .coffee-column {
+    flex: 100%;
+    max-width: 120%;
+    padding: 0;
+    margin-top: 20px;
+  }
+  .coffee-column img {
+    width: 100%;
+    height: 160px;
+    padding: 0;
+  }
   main {
     grid-template-columns: 10px repeat(6, 1fr) 10px;
     grid-gap: 30px;
@@ -1180,6 +1161,33 @@ nav.sticky {
   }
   .Card {
     grid-column-end: span 6;
+  }
+  .cartItems div p {
+    font-size: 12px;
+    padding: 4px;
+  }
+  .menuHeadings h1 {
+    font-size: 50px;
+  }
+  .menuHeadings h2 {
+    font-size: 30px;
+  }
+  .menuText p {
+    width: 100%;
+    text-align: left;
+  }
+  .ProductHeading h1 {
+    font-size: 30px;
+  }
+  .ProductHeading h2 {
+    font-size: 60px;
+  }
+  .productButton {
+    font-size: 12px;
+    padding: 15px;
+  }
+  .user_card {
+    width: 700px;
   }
 }
 
@@ -1215,7 +1223,7 @@ nav.sticky {
 }
 
 .chg-quantity {
-  width: 12px;
+  width: 14px;
   cursor: pointer;
   display: block;
   margin-top: 5px;
@@ -1294,6 +1302,107 @@ nav.sticky {
   float: right;
 }
 
+button {
+  outline: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.699);
+  transition: all 0.3s ease;
+  padding: 10px 30px !important;
+  border-bottom: 1px solid #555555 !important;
+}
+
+.navlinks {
+  width: 100%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  font-family: "Poppins", cursive;
+  text-decoration: none;
+  color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo:hover {
+  color: #e7912f;
+  text-decoration: none;
+}
+
+.navlinks li {
+  list-style-type: none;
+  margin-right: 20px;
+  padding: 15px;
+}
+
+.navlinks a {
+  color: whitesmoke;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.2s ease;
+}
+
+.navlinks a:hover {
+  color: #c79863;
+}
+
+nav.sticky {
+  background-color: black;
+}
+
+#cart-total {
+  color: white;
+  background: #c79863;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  left: -8px;
+}
+
+.navbar-toggler {
+  border: 2px solid gray;
+  float: right;
+}
+
+.cartIcon2 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.togglerBtn {
+  border: none;
+}
+
+.navbar-text {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+.navbar-text a {
+  font-size: 20px;
+}
+
+.hide {
+  display: none;
+}
+
 #form-wrapper {
   background-color: #272626;
   padding: 40px 40px 0;
@@ -1301,17 +1410,6 @@ nav.sticky {
 
 #form-wrapper hr {
   margin-bottom: 30px;
-}
-
-.form-field input {
-  border: 1px solid #4e4e4e !important;
-  padding: 12px 15px !important;
-  color: #9e9e9e !important;
-  background-color: transparent !important;
-}
-
-.form-field input:focus {
-  border: 1px solid #c4830c !important;
 }
 
 .checkout {
@@ -1339,13 +1437,14 @@ nav.sticky {
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(25%, 10%);
-  width: 20%;
-  height: 100%;
+  transform: translate(-32%, 2%);
+  width: 40px;
+  height: 48px;
   text-align: center;
   font-size: 24px;
   line-height: 45px;
   color: white;
+  background: #464646;
   pointer-events: none;
 }
 
@@ -1409,4 +1508,49 @@ nav.sticky {
 
 .deleteBtn:focus {
   outline: none;
+}
+
+.timepicker {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.timepicker:focus {
+  border: 1px solid #c4830c !important;
+}
+
+.input_time div {
+  position: absolute;
+  top: -0px;
+  right: 12px;
+  height: 50px;
+  text-align: centers;
+  font-size: 22px;
+  width: 40px;
+  padding: 8px;
+  background: #797979;
+}
+
+.form-field input {
+  border: 1px solid #4e4e4e !important;
+  padding: 12px 15px !important;
+  color: #9e9e9e !important;
+  background-color: transparent !important;
+}
+
+.form-field input:focus {
+  border: 1px solid #c4830c !important;
+}
+
+.paymentSection {
+  margin-bottom: 45px;
+}
+
+.payment {
+  padding: 20px;
+}
+
+.payment p {
+  margin-bottom: 20px;
 }
